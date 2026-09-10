@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div th:text="${message}"></div>
+		<h1 th:text="${hello}"></h1>
+		<div th:if="${isLoggedIn}">
+		        <b>Welcome back, student!!</b>
+		    </div>
+			<div th:if="${!isLoggedIn}">
+			       <b>Please log in to access the lessons</b>
+			   </div>
+	</body>
+</html>
