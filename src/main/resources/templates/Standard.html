@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<head>
+		    <title>Student List</title>
+		</head>
+		<body>
+		    <h1>Student List</h1>
+		    <table border=”1”>
+		        <thead>
+		            <tr>
+		                <th>Roll Number</th>
+		                <th>Name</th>
+		                <th>Mark</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+			<tr th:each="grade:${standard}">
+				<td th:text="${grade.rollno}"></td>
+				<td th:text="${grade.name}"></td>
+				<td th:text="${grade.mark}"></td>
+			</tr>
+			
+		</table>
+	</body>
+</html>

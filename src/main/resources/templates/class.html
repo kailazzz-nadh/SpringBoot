@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<ul th:each="score,index : ${class}" th:if="${index.index==0}">
+			<li>Roll NUmber:<span th:text="${score.rollno}"></span></li>
+			<li>Name:<span th:text="${score.name}"></span></li>
+			<li>Mark:<span th:text="${score.mark}"></span></li>
+		</ul>
+	</body>
+</html>
