@@ -1,0 +1,34 @@
+package com.example.work;
+import jakarta.validation.constraints.NotBlank;
+
+public class UserDetails {
+	 @NotBlank(message = "Name is required")
+	    public String name;
+	 @Gmail(message = "Your Gmail must contains @gmail.com")
+	    @NotBlank(message = "Email address is required")
+	    public String email;
+	 @Address(message = "Your address must contain India.")
+	    public String address;
+	 public String getName() {
+		 return name;
+	 }
+	 public void setName(String name) {
+		 this.name=name;
+	 }
+	  public String getEmail() {
+	        return email;
+	    }
+
+	    public void setEmail(String email) {
+	        this.email = email;
+	    }
+	    
+	    public String getAddress() {
+	        return address;
+	    }
+	    
+	    public void setAddress(String address) {
+	    	this.address=address;
+	    }
+
+}
