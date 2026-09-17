@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Add Mobile Phone</title>
+</head>
+
+<body>
+
+    <h1>Add Mobile Phone</h1>
+
+    <form th:action="@{/savephone}" th:object="${phone}" method="post">
+
+        <label>Phone Name:</label>
+        <input type="text" th:field="*{phonename}" required>
+        <br><br>
+
+        <label>Brand:</label>
+        <input type="text" th:field="*{brand}" required>
+        <br><br>
+
+        <label>Price:</label>
+        <input type="number" th:field="*{price}" required>
+        <br><br>
+
+        <label>Type:</label>
+        <select th:field="*{type}" required>
+            <option value="">Select Type</option>
+            <option value="Android">Android</option>
+            <option value="iPhone">iPhone</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Save Phone</button>
+
+    </form>
+
+</body>
+</html>
